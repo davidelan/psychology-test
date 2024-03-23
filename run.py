@@ -54,12 +54,30 @@ def get_name():
 
     return name
 
+    def print_description(range):
+        """
+        Prints the chosen description specified in the passed value range
+        Descriptions are contained in GoogleSheet "descriptions" and variables declared 
+        at the top of program. 
+        example: program_scope = f"{"A2"}:{"A13"}"
+        """
+    cell_values = descriptions.get(range)
+
+    for row in cell_values:
+        print(*row) # The asterix only selects the content and doesn't print the []
+
+    print("\n")
+
 
 def main():
     """
     Run all program functions
     """
+    # Gets name of user and displays greeting
     name = get_name()
+
+    # Print Description and purpose of the Program (in Descriptions GoogleSheet)
+    print_description(program_scope)
  
     
 

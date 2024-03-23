@@ -13,12 +13,16 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('psychology-test')
 
 questionnaires = SHEET.worksheet('questionnaires')
+descriptions = SHEET.worksheet('descriptions')
 
-#sales = SHEET.worksheet('sales')
+program_scope = f"{"A2"}:{"A14"}"
+gad7_description = f"{"B2"}:{"B4"}"
+sas20_description = f"{"B7"}:{"B10"}"
 
-#data = sales.get_all_values()
-
-#print(data)
+gad7_questions = f"{"A2"}:{"A8"}"
+gad7_answers = f"{"B2"}:{"B5"}"
+sas20_questions = f"{"C2"}:{"C21"}"
+sas20_answers = f"{"D2"}:{"D5"}"
 
 def get_name():
     """

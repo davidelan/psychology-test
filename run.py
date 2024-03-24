@@ -1,7 +1,7 @@
 import gspread
 from google.oauth2.service_account import Credentials
 import re #Regular expression operations
-from colorama import Fore # for producing colored terminal text and cursor positioning
+#from colorama import Fore # for producing colored terminal text and cursor positioning
 import os
 
 

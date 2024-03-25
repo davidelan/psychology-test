@@ -207,7 +207,28 @@ def run_questionnaire(choice):
     return selections
 
 
+def calculate_score(selection, score):
+    if selection == "1":
+        result = calculate_gad7_score(score)
+        print()
+        print("In the GAD-7 questionnaire you have scored: ", result)
+        print()
+        #print_description(gad7_score)
+        print()
+        print_gad7_results(result)
+    elif selection == "2":
+        result = calculate_sas20_score(score)
+        print()
+        print("In the SAS-20 questionnaire you have scored: ", result)
+        print()
+        #print_description(sas20_score)
+        print()
+        print_sas20_results(result)
+    else:
+        print("An error has occured, the program terminates here. Bye\n")  
+        exit()
 
+    return result
 
 
 

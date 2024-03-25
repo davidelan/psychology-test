@@ -20,21 +20,34 @@ SHEET = GSPREAD_CLIENT.open('psychology-test')
 questionnaires = SHEET.worksheet('questionnaires')
 descriptions = SHEET.worksheet('descriptions')
 
+# position of descriptions of scope of the program in cells in GoogleSheet
 program_scope = f"{"A2"}:{"A14"}"
-gad7_description = f"{"B2"}:{"B4"}"
-sas20_description = f"{"B7"}:{"B10"}"
 
+# position of descriptions in cells in GoogleSheet
+gad7_description = f"{"B2"}:{"B9"}"
+sas20_description = f"{"B12"}:{"B18"}"
+
+# position of questions and answers in cells in GoogleSheet
 gad7_questions = f"{"A2"}:{"A8"}"
 gad7_answers = f"{"B2"}:{"B5"}"
 sas20_questions = f"{"C2"}:{"C21"}"
 sas20_answers = f"{"D2"}:{"D5"}"
 
-#gad7_score_1 = 
+# position of scores in cells in GoogleSheet
+gad7_score = f"{"C2"}:{"C7"}"
+sas20_score = f"{"C9"}:{"C14"}"
 
-#data = questionnaires.get_all_values()
+# position of GAD-7 advices in cells in GoogleSheet
+gad7_advice_1 = f"{"C2"}:{"C7"}"
+gad7_advice_2 = f"{"C2"}:{"C7"}"
+gad7_advice_3 = f"{"C2"}:{"C7"}"
+gad7_advice_4 = f"{"C2"}:{"C7"}"
 
-#print(data)
-
+# position of SAS-20 advices in cells in GoogleSheet
+sas20_advice_1 = f"{"C2"}:{"C7"}"
+sas20_advice_2 = f"{"C2"}:{"C7"}"
+sas20_advice_3 = f"{"C2"}:{"C7"}"
+sas20_advice_4 = f"{"C2"}:{"C7"}"
 
     
 def get_name():
@@ -91,31 +104,32 @@ def print_description(range):
 
 
 def choose_questionnaire():
-    while True:
-        print("Please choose a questionnaire:\n")
-        print("1. Questionnaire GAD-7. - 7 questions")
-        print("2. Questionnaire SAS-20. - 20 questions\n")
-        #print("\n")
-        choice = input("Enter 1 or 2: ")
-        
-        if choice in ['1']:
-            #os.system('cls')  # Clears screen For Windows
-            os.system('clear')  # For Linux/OS X
-            print("\n")
-            print("You have chosen the questionnaire GAD-7\n")
-            print_description(gad7_description) # Prints the description of the GAD-7 questionnaire
-            return choice           
-        if choice in ['2']:
-            #os.system('cls')  # Clears screen For Windows
-            os.system('clear')  # For Linux/OS X
-            print("\n")
-            print("You have chosen the questionnaire SAS-20\n")
-            print_description(sas20_description) # Prints the description of the SAS-20 questionnaire
-            return choice
-        else:
-            print("\n")
-            print("******* Invalid choice. Please enter 1 or 2.\n")
-
+    
+        while True:
+            try:
+                print("Please choose a questionnaire:\n")
+                print("1. Questionnaire GAD-7. - 7 questions")
+                print("2. Questionnaire SAS-20. - 20 questions\n")
+                #print("\n")
+                choice = input("Enter 1 or 2: ")
+                
+                if choice in ['1']:
+                    os.system('clear')  # Clear Screen For Linux/OS X
+                    print("\n")
+                    print("You have chosen the questionnaire GAD-7\n")
+                    print_description(gad7_description) # Prints the description of the GAD-7 questionnaire
+                    return choice           
+                if choice in ['2']:
+                    os.system('clear')  # Clear Screen For Linux/OS X
+                    print("\n")
+                    print("You have chosen the questionnaire SAS-20\n")
+                    print_description(sas20_description) # Prints the description of the SAS-20 questionnaire
+                    return choice
+                else:
+                    print("\n")
+                    raise ValueError("******* Invalid choice. Please enter 1 or 2.\n")
+            except ValueError as e:
+                print(e)
 
 def run_questionnaire(choice):
 
@@ -149,8 +163,7 @@ def run_questionnaire(choice):
             selections.append(user_answer)
 
             print("\n")
-            #os.system('cls')  # For Windows
-            os.system('clear')  # For Linux/OS X
+            os.system('clear')  # Clear Screen For Linux/OS X
             #print("this is colums: " + str(columns))
             print("\nYour answers:", selections)
 
@@ -183,8 +196,7 @@ def run_questionnaire(choice):
             selections.append(user_answer)
 
             print("\n")
-            #os.system('cls')  # For Windows
-            os.system('clear')  # For Linux/OS X
+            os.system('clear')  # Clear Screen For Linux/OS X
             #print("this is colums: " + str(columns))
             print("\nYour answers:", selections)
 
@@ -193,6 +205,30 @@ def run_questionnaire(choice):
         exit() 
 
     return selections
+
+
+def calculate_score(selection, score):
+    if selection == "1":
+        result = calculate_gad7_score(score)
+        print()
+        print("In the GAD-7 questionnaire you have scored: ", result)
+        print()
+        #print_description(gad7_score)
+        print()
+        print_gad7_results(result)
+    elif selection == "2":
+        result = calculate_sas20_score(score)
+        print()
+        print("In the SAS-20 questionnaire you have scored: ", result)
+        print()
+        #print_description(sas20_score)
+        print()
+        print_sas20_results(result)
+    else:
+        print("An error has occured, the program terminates here. Bye\n")  
+        exit()
+
+    return result
 
 
 
@@ -213,6 +249,8 @@ def main():
     score = run_questionnaire(selection)
     print("\n")
     print(score)
+
+    calculate_score(selection, score)
   
     
 

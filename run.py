@@ -1,7 +1,7 @@
 import gspread
 from google.oauth2.service_account import Credentials
 import re #Regular expression operations
-#from colorama import Fore # for producing colored terminal text and cursor positioning
+from colorama import Fore # for producing colored terminal text and cursor positioning
 import os
 
 
@@ -377,6 +377,12 @@ def main():
     """
     # Gets name of user and displays greeting
     #name = get_name()
+
+    print("\n")
+    #type_print("Welcome to our psychology-test for fun! :-)")
+    type_print(Fore.WHITE + "Welcome to our psychology-test for fun! :-)")
+    print("\n")
+
 
     # Print Description and purpose of the Program (in Descriptions GoogleSheet)
     print_description(program_scope) 

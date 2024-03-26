@@ -380,7 +380,7 @@ def main():
 
     print("\n")
     #type_print("Welcome to our psychology-test for fun! :-)")
-    type_print(Fore.WHITE + "Welcome to our psychology-test for fun! :-)")
+    print(Fore.WHITE + "Welcome to our psychology-test for fun! :-)")
     print("\n")
 
 

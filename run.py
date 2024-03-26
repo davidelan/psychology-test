@@ -34,20 +34,27 @@ sas20_questions = f"{"C2"}:{"C21"}"
 sas20_answers = f"{"D2"}:{"D5"}"
 
 # position of scores in cells in GoogleSheet
-gad7_score = f"{"C2"}:{"C7"}"
-sas20_score = f"{"C9"}:{"C14"}"
+gad7_score_1 = f"{"D4"}:{"D8"}"
+gad7_score_2 = f"{"D10"}:{"D17"}"
+gad7_score_3 = f"{"D19"}:{"D26"}"
+gad7_score_4 = f"{"D28"}:{"D35"}"
+sas20_score_1 = f"{"E4"}:{"E8"}"
+sas20_score_2 = f"{"E10"}:{"E15"}"
+sas20_score_3 = f"{"E17"}:{"E22"}"
+sas20_score_4 = f"{"E24"}:{"E29"}"
+
 
 # position of GAD-7 advices in cells in GoogleSheet
-gad7_advice_1 = f"{"C2"}:{"C7"}"
-gad7_advice_2 = f"{"C2"}:{"C7"}"
-gad7_advice_3 = f"{"C2"}:{"C7"}"
-gad7_advice_4 = f"{"C2"}:{"C7"}"
+gad7_advice_1 = f"{"F4"}:{"F8"}"
+gad7_advice_2 = f"{"F10"}:{"F15"}"
+gad7_advice_3 = f"{"F17"}:{"F22"}"
+gad7_advice_4 = f"{"F24"}:{"F30"}"
 
 # position of SAS-20 advices in cells in GoogleSheet
-sas20_advice_1 = f"{"C2"}:{"C7"}"
-sas20_advice_2 = f"{"C2"}:{"C7"}"
-sas20_advice_3 = f"{"C2"}:{"C7"}"
-sas20_advice_4 = f"{"C2"}:{"C7"}"
+sas20_advice_1 = f"{"G4"}:{"G8"}"
+sas20_advice_2 = f"{"G10"}:{"G15"}"
+sas20_advice_3 = f"{"G17"}:{"G23"}"
+sas20_advice_4 = f"{"G25"}:{"G32"}"
 
     
 def get_name():
@@ -114,13 +121,13 @@ def choose_questionnaire():
                 choice = input("Enter 1 or 2: ")
                 
                 if choice in ['1']:
-                    os.system('clear')  # Clear Screen For Linux/OS X
+                    #os.system('clear')  # For Linux/OS X
                     print("\n")
                     print("You have chosen the questionnaire GAD-7\n")
                     print_description(gad7_description) # Prints the description of the GAD-7 questionnaire
                     return choice           
                 if choice in ['2']:
-                    os.system('clear')  # Clear Screen For Linux/OS X
+                    #os.system('clear')  # For Linux/OS X
                     print("\n")
                     print("You have chosen the questionnaire SAS-20\n")
                     print_description(sas20_description) # Prints the description of the SAS-20 questionnaire
@@ -144,11 +151,13 @@ def run_questionnaire(choice):
 
         
         for i in questions:
+            # Prints the questions taken from the Google Sheet
             print()
             print(*i, "\n") # The asterix only selects the content and doesn't print the []
 
 
             for x in answers:
+                # Prints the options (a, b, c or d) for questions
                 print(*x)
 
             print("\n")
@@ -163,11 +172,9 @@ def run_questionnaire(choice):
             selections.append(user_answer)
 
             print("\n")
-            os.system('clear')  # Clear Screen For Linux/OS X
-            #print("this is colums: " + str(columns))
+            os.system('cls')  # For Windows
             print("\nYour answers:", selections)
 
-        
 
     elif choice == "2":
         questions = questionnaires.get(sas20_questions)
@@ -196,7 +203,7 @@ def run_questionnaire(choice):
             selections.append(user_answer)
 
             print("\n")
-            os.system('clear')  # Clear Screen For Linux/OS X
+            os.system('cls')  # For Windows
             #print("this is colums: " + str(columns))
             print("\nYour answers:", selections)
 
@@ -230,6 +237,138 @@ def calculate_score(selection, score):
 
     return result
 
+    #calculate_gad7_score(score) if selection == 1 else calculate_sas20_score(score)
+    #size = 'small' if x < 10 else 'medium' if x < 20 else 'large'
+
+def calculate_gad7_score(score):
+    # Dictionary to map answer options to scores
+    answer_scores = {'a': 0, 'b': 1, 'c': 2, 'd': 3}
+    
+    # Calculate total score
+    total_score = sum(answer_scores[answer] for answer in score)
+    
+    return total_score
+
+
+def calculate_sas20_score(score):
+    # Dictionary to map answer options to scores
+    answer_scores = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+    
+    # Calculate total score
+    total_score = sum(answer_scores[answer] for answer in score)
+    
+    return total_score
+
+
+def print_gad7_results(total_score):
+    if total_score >= 0 and total_score <= 4:
+        #print("Total GAD-7 score:", total_score)
+        print_description(gad7_score_1)
+        #print("Interpretation: Minimal anxiety")
+    elif total_score >= 5 and total_score <= 9:
+        print_description(gad7_score_2)
+        #print("Total GAD-7 score:", total_score)
+        #print("Interpretation: Mild anxiety")
+    elif total_score >= 10 and total_score <= 14:
+        print_description(gad7_score_3)
+        #print("Total GAD-7 score:", total_score)
+        #print("Interpretation: Moderate anxiety")
+    elif total_score >= 15 and total_score <= 21:
+        print_description(gad7_score_4)
+        #print("Total GAD-7 score:", total_score)
+        #print("Interpretation: Severe anxiety")
+    else:
+        print("Invalid total score")
+
+
+def print_sas20_results(total_score):
+    if total_score >= 1 and total_score < 45:
+        print_description(sas20_score_1)
+        #print("Total SAS-20 score:", total_score)
+        #print("Within the normal range")
+    elif total_score >= 45 and total_score < 60:
+        print_description(sas20_score_2)
+        #print("Total SAS-20 score:", total_score)
+        #print("Minimal to moderate anxiety")
+    elif total_score >= 60 and total_score < 74:
+        print_description(sas20_score_3)
+        #print("Total SAS-20 score:", total_score)
+        #print("Marked to severe anxiety")
+    elif total_score >= 75 and total_score <= 80:
+        print_description(sas20_score_4)
+        #print("Total SAS-20 score:", total_score)
+        #print("Most extreme anxiety")
+    else:
+        print("Invalid total score")
+
+
+
+def advise(selection, total_score):
+    print()
+
+    while True:
+        answer = input("Would you like to get a NON PROFESSIONAL advice according to your results? (yes/no): ").lower()
+        
+        if answer == "yes":
+
+            if selection == "1":
+                print_gad7_advice(total_score)
+                break
+            elif selection == "2":
+                print_sas20_advice(total_score)
+                break
+            else:
+                print("An error has occured, the program terminates here. Bye\n")  
+                exit()
+ 
+        elif answer == "no":
+            print("Goodbye ", selection, total_score)
+            break
+        else:
+            print("Invalid input. Please enter 'yes' or 'no'.")
+
+
+def print_gad7_advice(total_score):
+    if total_score >= 0 and total_score <= 4:
+        print()
+        print_description(gad7_advice_1)
+        
+    elif total_score >= 5 and total_score <= 9:
+        print()
+        print_description(gad7_advice_2)
+       
+    elif total_score >= 10 and total_score <= 14:
+        print()
+        print_description(gad7_advice_3)
+      
+    elif total_score >= 15 and total_score <= 21:
+        print()
+        print_description(gad7_advice_4)
+
+    else:
+        print("Invalid total score")
+
+
+def print_sas20_advice(total_score):
+    if total_score >= 1 and total_score < 45:
+        print()
+        print_description(sas20_advice_1)
+
+    elif total_score >= 45 and total_score < 60:
+        print()
+        print_description(sas20_advice_2)
+
+    elif total_score >= 60 and total_score < 74:
+        print()
+        print_description(sas20_advice_3)
+
+    elif total_score >= 75 and total_score <= 80:
+        print()
+        print_description(sas20_advice_4)
+
+    else:
+        print("Invalid total score")
+ 
 
 
 def main():
@@ -244,13 +383,19 @@ def main():
 
   
     selection = choose_questionnaire()
-    print(selection)
+    #print(selection)
 
     score = run_questionnaire(selection)
-    print("\n")
-    print(score)
+    #print("\n")
+    #print(score)
 
-    calculate_score(selection, score)
+    #calculate_score(selection, score)
+    total_score = calculate_score(selection, score)
+    #print("ciao ciao ", total_score)
+
+    #print_description(selection, total_score)
+
+    advise(selection, total_score)
   
     
 
@@ -259,6 +404,6 @@ main()
 
 
     #os.system('cls')  # For Windows
-    #os.system('clear')  # For Linux/OS X
+    #os.system('clear')  # Clear scsreen for Linux/OS X
 
 

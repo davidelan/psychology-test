@@ -8,3 +8,4 @@ pyasn1-modules==0.3.0
 requests-oauthlib==1.4.0
 rsa==4.9
 StrEnum==0.4.15
+colorama==0.4.6

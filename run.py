@@ -44,17 +44,7 @@ sas20_score_3 = f"{"E17"}:{"E22"}"
 sas20_score_4 = f"{"E24"}:{"E29"}"
 
 
-# position of GAD-7 advices in cells in GoogleSheet
-gad7_advice_1 = f"{"F4"}:{"F8"}"
-gad7_advice_2 = f"{"F10"}:{"F15"}"
-gad7_advice_3 = f"{"F17"}:{"F22"}"
-gad7_advice_4 = f"{"F24"}:{"F30"}"
 
-# position of SAS-20 advices in cells in GoogleSheet
-sas20_advice_1 = f"{"G4"}:{"G8"}"
-sas20_advice_2 = f"{"G10"}:{"G15"}"
-sas20_advice_3 = f"{"G17"}:{"G23"}"
-sas20_advice_4 = f"{"G25"}:{"G32"}"
 
     
 def get_name():

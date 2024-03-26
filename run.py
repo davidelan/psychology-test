@@ -328,46 +328,7 @@ def advise(selection, total_score):
             print("Invalid input. Please enter 'yes' or 'no'.")
 
 
-def print_gad7_advice(total_score):
-    if total_score >= 0 and total_score <= 4:
-        print()
-        print_description(gad7_advice_1)
-        
-    elif total_score >= 5 and total_score <= 9:
-        print()
-        print_description(gad7_advice_2)
-       
-    elif total_score >= 10 and total_score <= 14:
-        print()
-        print_description(gad7_advice_3)
-      
-    elif total_score >= 15 and total_score <= 21:
-        print()
-        print_description(gad7_advice_4)
 
-    else:
-        print("Invalid total score")
-
-
-def print_sas20_advice(total_score):
-    if total_score >= 1 and total_score < 45:
-        print()
-        print_description(sas20_advice_1)
-
-    elif total_score >= 45 and total_score < 60:
-        print()
-        print_description(sas20_advice_2)
-
-    elif total_score >= 60 and total_score < 74:
-        print()
-        print_description(sas20_advice_3)
-
-    elif total_score >= 75 and total_score <= 80:
-        print()
-        print_description(sas20_advice_4)
-
-    else:
-        print("Invalid total score")
  
 
 

@@ -397,6 +397,29 @@ def print_sas20_advice(total_score):
         print("Invalid total score")
  
 
+def re_run_main():
+    run = True
+
+    while run == True:
+        answer = input("Would you like to re-take one of the psychological tests? (yes/no): ").lower()
+            
+        if answer == "yes":
+            os.system('cls')  # For Windows
+            #os.system('clear')  # Clear Screen Command for Linux/OS X
+            run = False
+            main("Second time")
+
+     
+        elif answer == "no":
+            print("\n")
+            type_print("Thank you for taking part in our psychological test. Goodbye")
+            print("\n")
+            break
+        else:
+            print("Invalid input. Please enter 'yes' or 'no'.")
+
+
+
 
 def main():
     """

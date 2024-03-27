@@ -1,31 +1,18 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Psychology Test for fun!
+![header](/assets/images/run_program_screenShot.jpg)
 
-Welcome davide laneri,
+This project utilizes well known psychological questionnaires to assess the level of Generalized Anxiety Disorder (GAD) of the user. It can be used for self assessment and includes two questionnaires with 7 and 20 questions. It is intended for educational purpose only. This program must NOT be used as a real, medical or psycholgical assessment. 
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+The deployed project live link is [HERE](https://psychology-test-17ac581f1251.herokuapp.com/) - ***Use Ctrl (Cmd) and click to open in a new window.*** 
 
-## Reminders
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+## Contents
 
-## Creating the Heroku app
-
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
+- [Introduction](#introduction)
+- [Project](#project)
+  - [User goals:](#user-goals)
+  - [Site owner goals](#site-owner-goals)
+- [Pre development](#pre-development)
+- [Development](#development)
+- [Features](#features)
+  - [Slow Typing Instructions](#slow-typing-instructions)

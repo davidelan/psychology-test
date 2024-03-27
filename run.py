@@ -136,22 +136,24 @@ def choose_questionnaire():
     
         while True:
             try:
-                print("Please choose a questionnaire:\n")
-                print("1. Questionnaire GAD-7. - 7 questions")
-                print("2. Questionnaire SAS-20. - 20 questions\n")
+                type_print("Please choose a questionnaire:\n")
+                type_print("1. Questionnaire GAD-7. - 7 questions")
+                type_print("2. Questionnaire SAS-20. - 20 questions\n")
                 #print("\n")
                 choice = input("Enter 1 or 2: ")
                 
                 if choice in ['1']:
-                    os.system('clear')  # For Linux/OS X
+                    os.system('cls')  # Clears screen For Windows
+                    #os.system('clear')  # Clear Screen Command for Linux/OS X
                     print("\n")
-                    print("You have chosen the questionnaire GAD-7\n")
+                    type_print("You have chosen the questionnaire GAD-7\n")
                     print_description(gad7_description) # Prints the description of the GAD-7 questionnaire
                     return choice           
                 if choice in ['2']:
-                    os.system('clear')  # For Linux/OS X
+                    os.system('cls')  # Clears screen For Windows
+                    #os.system('clear')  # Clear Screen Command for Linux/OS X
                     print("\n")
-                    print("You have chosen the questionnaire SAS-20\n")
+                    type_print("You have chosen the questionnaire SAS-20\n")
                     print_description(sas20_description) # Prints the description of the SAS-20 questionnaire
                     return choice
                 else:
@@ -159,6 +161,7 @@ def choose_questionnaire():
                     raise ValueError("******* Invalid choice. Please enter 1 or 2.\n")
             except ValueError as e:
                 print(e)
+
 
 def run_questionnaire(choice):
 

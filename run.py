@@ -56,6 +56,22 @@ sas20_advice_2 = f"{"G10"}:{"G15"}"
 sas20_advice_3 = f"{"G17"}:{"G23"}"
 sas20_advice_4 = f"{"G25"}:{"G32"}"
 
+# function for Slow Typing Instructions time.sleep 0.05
+def type_print(text):
+    for character in text:
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        time.sleep(0.05)
+    print('')
+
+# function for (slower) Slow Typing Instructions time.sleep 0.3
+def type_print_slow(text):
+    for character in text:
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        time.sleep(0.3)
+    print('')
+
     
 def get_name():
     """

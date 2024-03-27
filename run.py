@@ -127,10 +127,9 @@ def print_description(range):
     cell_values = descriptions.get(range)
 
     for row in cell_values:
-        print(*row) # The asterix only selects the content and doesn't print the []
+        type_print_slow(row) 
 
     print("\n")
-
 
 
 def choose_questionnaire():

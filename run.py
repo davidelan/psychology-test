@@ -263,8 +263,7 @@ def calculate_score(selection, score):
 
     return result
 
-    #calculate_gad7_score(score) if selection == 1 else calculate_sas20_score(score)
-    #size = 'small' if x < 10 else 'medium' if x < 20 else 'large'
+
 
 def calculate_gad7_score(score):
     # Dictionary to map answer options to scores
@@ -348,7 +347,9 @@ def advise(selection, total_score):
                 exit()
  
         elif answer == "no":
-            print("Goodbye ", selection, total_score)
+            print("\n")
+            type_print("Thank you for taking part in our psychological test.")
+            print("\n")
             break
         else:
             print("Invalid input. Please enter 'yes' or 'no'.")

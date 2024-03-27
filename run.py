@@ -421,21 +421,34 @@ def re_run_main():
 
 
 
-def main():
+def main(condition):
     """
     Run all program functions
     """
-    # Gets name of user and displays greeting
-    #name = get_name()
 
-    print("\n")
-    #type_print("Welcome to our psychology-test for fun! :-)")
-    print(Fore.RED + "Welcome to our psychology-test for fun! :-)")
-    print("\n")
+    if condition == "First time":
+
+        init() # Initialisation for colorama import
+
+        print("\n")
+        #type_print("Welcome to our psychology-test for fun! :-)")
+        
+        type_print(Fore.YELLOW + "Welcome to our psychology-test for fun! :-)" + Fore.RESET)
+        print("\n")
+        
+
+        # Print Description and purpose of the Program (in Descriptions GoogleSheet)
+        print_description(program_scope)
 
 
-    # Print Description and purpose of the Program (in Descriptions GoogleSheet)
-    print_description(program_scope) 
+        # Gets name of user and displays greeting
+        name = get_name()
+        
+    elif condition == "Second time":
+        name = descriptions.acell(user_name).value
+        print("\n")
+        type_print("Hello " + Fore.GREEN + name + Fore.RESET + ", Welcome back to our psychology-test for fun\n")
+
 
   
     selection = choose_questionnaire()
@@ -452,11 +465,16 @@ def main():
     #print_description(selection, total_score)
 
     advise(selection, total_score)
-  
+
+    re_run_main()
+
     
 
 
-main()
+
+    
+
+main("First time")
 
 
     #os.system('cls')  # For Windows

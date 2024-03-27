@@ -56,6 +56,9 @@ sas20_advice_2 = f"{"G10"}:{"G15"}"
 sas20_advice_3 = f"{"G17"}:{"G23"}"
 sas20_advice_4 = f"{"G25"}:{"G32"}"
 
+#user_name = f"{"A17"}"
+user_name = "A17"
+
 # function for Slow Typing Instructions time.sleep 0.05
 def type_print(text):
     for character in text:

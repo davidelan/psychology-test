@@ -1,8 +1,11 @@
 import gspread
 from google.oauth2.service_account import Credentials
 import re #Regular expression operations
-from colorama import Fore # for producing colored terminal text and cursor positioning
+#from colorama import Fore # for producing colored terminal text and cursor positioning
+from colorama import init, Fore, Style
 import os
+import sys
+import time
 
 
 SCOPE = [
@@ -104,7 +107,8 @@ def get_name():
 
             else:
                 print("\n")
-                print("Hello " + name + ", Welcome to our psychology-test for fun\n")
+                type_print("Hello " + Fore.GREEN + name + Fore.RESET + ", Welcome to our psychology-test for fun\n")
+                descriptions.update_acell(user_name, name)  # Update the cell
                 break  # if name follows all rules, exit the while loop
 
         except ValueError as e:

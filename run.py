@@ -143,15 +143,13 @@ def choose_questionnaire():
                 choice = input("Enter 1 or 2: ")
                 
                 if choice in ['1']:
-                    os.system('cls')  # Clears screen For Windows
-                    #os.system('clear')  # Clear Screen Command for Linux/OS X
+                    os.system('clear')  # Clear Screen Command for Linux/OS X
                     print("\n")
                     type_print("You have chosen the questionnaire GAD-7\n")
                     print_description(gad7_description) # Prints the description of the GAD-7 questionnaire
                     return choice           
                 if choice in ['2']:
-                    os.system('cls')  # Clears screen For Windows
-                    #os.system('clear')  # Clear Screen Command for Linux/OS X
+                    os.system('clear')  # Clear Screen Command for Linux/OS X
                     print("\n")
                     type_print("You have chosen the questionnaire SAS-20\n")
                     print_description(sas20_description) # Prints the description of the SAS-20 questionnaire
@@ -197,8 +195,7 @@ def run_questionnaire(choice):
             selections.append(user_answer)
 
             print("\n")
-            os.system('cls')  # For Windows
-            #os.system('clear')  # Clear Screen Command for Linux/OS X
+            os.system('clear')  # Clear Screen Command for Linux/OS X
             print("\nYour answers:", selections)
 
     elif choice == "2":
@@ -228,8 +225,7 @@ def run_questionnaire(choice):
             selections.append(user_answer)
 
             print("\n")
-            os.system('cls')  # For Windows
-            #os.system('clear')  # Clear Screen Command for Linux/OS X
+            os.system('clear')  # Clear Screen Command for Linux/OS X
             #print("this is colums: " + str(columns))
             print("\nYour answers:", selections)
 
@@ -404,8 +400,7 @@ def re_run_main():
         answer = input("Would you like to re-take one of the psychological tests? (yes/no): ").lower()
             
         if answer == "yes":
-            os.system('cls')  # For Windows
-            #os.system('clear')  # Clear Screen Command for Linux/OS X
+            os.system('clear')  # Clear Screen Command for Linux/OS X
             run = False
             main("Second time")
 
@@ -468,11 +463,7 @@ def main(condition):
 
     re_run_main()
 
-    
 
-
-
-    
 
 main("First time")
 

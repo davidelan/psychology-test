@@ -172,7 +172,7 @@ def run_questionnaire(choice):
         answers = questionnaires.get(gad7_answers)
         #print(cell_values)
 
-        print("Over the last 2 weeks, how often have you been bothered by the following problems?\n")
+        type_print("Over the last 2 weeks, how often have you been bothered by the following problems?\n")
 
         
         for i in questions:
@@ -197,17 +197,17 @@ def run_questionnaire(choice):
             selections.append(user_answer)
 
             print("\n")
-            os.system('clear')  # Clear scsreen for Linux/OS X
+            os.system('cls')  # For Windows
+            #os.system('clear')  # Clear Screen Command for Linux/OS X
             print("\nYour answers:", selections)
-
 
     elif choice == "2":
         questions = questionnaires.get(sas20_questions)
         answers = questionnaires.get(sas20_answers)
         #print(cell_values)
 
-        print("For each item below, please check the column which best describes")
-        print("how often you felt or behaved this way during the past several days.\n")
+        type_print("For each item below, please check the column which best describes")
+        type_print("how often you felt or behaved this way during the past several days.\n")
 
         for i in questions:
             print(*i, "\n") # The asterix only selects the content and doesn't print the []
@@ -228,7 +228,8 @@ def run_questionnaire(choice):
             selections.append(user_answer)
 
             print("\n")
-            os.system('clear')  # Clear scsreen for Linux/OS X
+            os.system('cls')  # For Windows
+            #os.system('clear')  # Clear Screen Command for Linux/OS X
             #print("this is colums: " + str(columns))
             print("\nYour answers:", selections)
 

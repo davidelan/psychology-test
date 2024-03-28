@@ -182,3 +182,26 @@ The Application has been deployed from GitHub to Heroku by following the steps:
 4. Go to the CODE area on the right and select "Open with GitHub Desktop".
 5. You will be asked if you want to clone the repository - say yes.
 6. GitHub desktop will suggest what to do next - select Open code using Visual Studio Code.
+
+## Bugs
+
+I am not aware of any bugs in the code
+
+
+## Credits
+
+The main technique on how to ustilize Google Sheets was taken from the Code Insitute "Love Sandwiches" project. [here](https://github.com/davidelan/love-sandwiches)
+
+
+No tutorials or videos were used to developed this program, only often googled how to implement certain python functionalities, such as how to import and use the "colorama" library.
+
+The structure of this README.md was taken from Diane Corriette [here](https://github.com/todiane/corri-construction-p3/blob/main/README.md)
+
+
+## Acknowledgements
+
+I would like to thank Kay Welfare and my fellow students for the inspiration and the support I always receie in our weekly meetings.
+
+A big thank you to my mentor Jubril Akolade for his support and valuable advices.
+
+I am very grateful to my girlfriend who puts up with me when I am under stress becuase of a coding project :-D

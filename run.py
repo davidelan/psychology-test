@@ -189,7 +189,7 @@ def run_questionnaire(choice):
         questions = questionnaires.get(gad7_questions)
         answers = questionnaires.get(gad7_answers)
         type_print("Over the last 2 weeks, ")
-        type_print("how often have you been bothered by")
+        type_print("how often have you been bothered by\n")
         type_print("the following problems?\n")
 
         for i in questions:

@@ -141,10 +141,10 @@ As already mentioned before, GoogleSheets were used in this project. The purpose
 - miro.com
 
 ### Libraries
-[colorama Fore & Back](https://pypi.org/project/colorama/)
-[typing](https://www.101computing.net/python-typing-text-effect/))
-[datetime](https://docs.python.org/3/library/time.html)
-[sleep](https://realpython.com/python-sleep/)
+[colorama Fore](https://pypi.org/project/colorama/) - for colored text
+[typing effect](https://www.101computing.net/python-typing-text-effect/) - for slow motion typing
+[datetime](https://docs.python.org/3/library/time.html) - for time functions 
+[sleep](https://realpython.com/python-sleep/) - for providing sleep pauses capabilities
 
 
 ## Testing

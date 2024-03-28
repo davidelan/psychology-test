@@ -112,6 +112,7 @@ def get_name():
                 raise ValueError("Name must start with a capital letter")
 
             else:
+                os.system('clear')  # Clear Screen Command for Linux/OS X
                 print("\n")
                 type_print("Hello " + Fore.GREEN + name + Fore.RESET)
                 type_print(", Welcome to our psychology-test for fun :-)")

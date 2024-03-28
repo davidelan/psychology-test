@@ -245,7 +245,6 @@ def run_questionnaire(choice):
 
             print("\n")
             os.system('clear')  # Clear Screen Command for Linux/OS X
-            
 
     else:
         print("An error has occured, the program terminates here. Bye\n")

@@ -157,7 +157,8 @@ The code has been tested and the results can be found [here - TESTING](https://g
 
 ## Validation
 
-PEP8 - Python Style Guide Checker imported - https://pypi.org/project/pep8/
+PEP8 - Python Style Guide Checker imported - [here - VALIDATION](https://pypi.org/project/pep8/)
+
 All code was validated, and where lines were showing as too long they were adjusted. Some line adjustments caused bugs in the code and it stopped working so they were left as longer lines to avoid this issue. pycodestyle . - was used in Codeanywhere terminal to list any issues.
 
 

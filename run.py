@@ -155,8 +155,7 @@ def choose_questionnaire():
             print("\n")
             choice = input("Enter 1 or 2: ")
             if choice in ['1']:
-                os.system('cls')  # Clears screen For Windows
-                # os.system('clear')  # Clear Screen Command for Linux/OS X
+                os.system('clear')  # Clear Screen Command for Linux/OS X
                 print("\n")
                 type_print("You have chosen the questionnaire GAD-7\n")
                 print("\n")
@@ -164,8 +163,7 @@ def choose_questionnaire():
                 print_description(gad7_description)
                 return choice
             if choice in ['2']:
-                os.system('cls')  # Clears screen For Windows
-                # os.system('clear')  # Clear Screen Command for Linux/OS X
+                os.system('clear')  # Clear Screen Command for Linux/OS X
                 print("\n")
                 type_print("You have chosen the questionnaire SAS-20\n")
                 print("\n")
@@ -215,9 +213,7 @@ def run_questionnaire(choice):
             selections.append(user_answer)
 
             print("\n")
-            os.system('cls')  # For Windows
-            # os.system('clear')  # Clear Screen Command for Linux/OS X
-            # print("\nYour answers:", selections)
+            os.system('clear')  # Clear Screen Command for Linux/OS X
 
     elif choice == "2":
         questions = questionnaires.get(sas20_questions)
@@ -248,9 +244,8 @@ def run_questionnaire(choice):
             selections.append(user_answer)
 
             print("\n")
-            os.system('cls')  # For Windows
-            # os.system('clear')  # Clear Screen Command for Linux/OS X
-            # print("\nYour answers:", selections)
+            os.system('clear')  # Clear Screen Command for Linux/OS X
+            
 
     else:
         print("An error has occured, the program terminates here. Bye\n")
@@ -429,8 +424,7 @@ def re_run_main():
         print("psychological tests? (yes/no): ", end=' ')
         answer = input().lower()
         if answer == "yes":
-            os.system('cls')  # For Windows
-            # os.system('clear')  # Clear Screen Command for Linux/OS X
+            os.system('clear')  # Clear Screen Command for Linux/OS X
             run = False
             main("Second time")
         elif answer == "no":

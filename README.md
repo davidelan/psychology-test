@@ -150,3 +150,35 @@ As already mentioned before, GoogleSheets were used in this project. The purpose
 ## Testing
 
 The code has been tested and the results can be found [here - TESTING](https://github.com/todiane/corri-construction-p3/blob/main/TESTING.md)
+
+## Validation
+
+PEP8 - Python Style Guide Checker imported - https://pypi.org/project/pep8/
+All code was validated, and where lines were showing as too long they were adjusted. Some line adjustments caused bugs in the code and it stopped working so they were left as longer lines to avoid this issue. pycodestyle . - was used in Codeanywhere terminal to list any issues.
+
+
+## Deployment
+
+### Heroku
+
+The Application has been deployed from GitHub to Heroku by following the steps:
+
+1. Create or log in to your account at heroku.com
+2. Create a new app, add a unique app name ( for example psychology-test) and then choose your region
+3. Click on create app
+4. Go to "Settings"
+5. Under Config Vars add the private API key information using key 'CRED' and into the value area copy the API key information added to the .json file.  Also add a key 'PORT' and value '8000'.
+6. Add required buildpacks (further dependencies). For this project, set it up so Python will be on top and Node.js on bottom
+7. Go to "Deploy" and select "GitHub" in "Deployment method"
+8. To connect Heroku app to your Github repository code enter your repository name, click 'Search' and then 'Connect' when it shows below.
+9. Choose the branch you want to build your app from
+10. If preferred, click on "Enable Automatic Deploys", which keeps the app up to date with your GitHub repository
+11. Wait for the app to build. Once ready you will see the “App was successfully deployed” message and a 'View' button to take you to your deployed link.
+
+### Branching the GitHub Repository using GitHub Desktop and Visual Studio Code
+1. Go to the GitHub repository.
+2. Click on the branch button in the left hand side under the repository name.
+3. Give your branch a name.
+4. Go to the CODE area on the right and select "Open with GitHub Desktop".
+5. You will be asked if you want to clone the repository - say yes.
+6. GitHub desktop will suggest what to do next - select Open code using Visual Studio Code.

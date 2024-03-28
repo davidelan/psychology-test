@@ -1,6 +1,6 @@
 
 # Psychology Test for fun!
-![header](/assets/images/run-program-screenShot.jpg)
+![header](/assets/images/run-program-screenshot.jpg)
 
 This project utilizes well known psychological questionnaires to assess the level of Generalized Anxiety Disorder (GAD) of the user. It can be used for self assessment and includes two questionnaires with 7 and 20 questions. It is intended for educational purpose only. This program must NOT be used as a real, medical or psycholgical assessment. 
 

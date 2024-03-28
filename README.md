@@ -11,12 +11,9 @@ The deployed project live link is [HERE](https://psychology-test-17ac581f1251.he
 
 - [Introduction](#introduction)
 - [Project](#project)
-- [Pre development](#pre-development)
-- [Development](#development)
 - [Features](#features)
-- [Google Sheets](#google-sheets)
+- [Use of Google Sheets](#use-of-google-sheets)
 - [Technologies Used](#technologies-used)
-- [Resources](#resources)
 - [Testing](#testing)
 - [Future Updates](#future-updates)  
 - [Validation](#validation)
@@ -154,6 +151,15 @@ As already mentioned before, GoogleSheets were used in this project. The purpose
 ## Testing
 
 The code has been tested and the results can be found [here - TESTING](https://github.com/todiane/corri-construction-p3/blob/main/TESTING.md)
+
+
+## Future Updates
+
+The project could be updated by including more questionnaires, for example or by having different "themes" that could be assessed. 
+Another improvement could be to have a login system, which could involve the creation of a username and password. 
+
+If I had more time, I could have also optimized the program by removing recursive code.
+
 
 ## Validation
 

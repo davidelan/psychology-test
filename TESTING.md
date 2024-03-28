@@ -7,13 +7,12 @@ In order to make sure that all functionalities and sections of the program work 
 | ------------- | ----------------------------- | ---------------------------- | ----------------- |
 | Description 1 | User is given a description of program | Description presented | Works as expected |
 | Name input | User is asked to enter their name | Name input| Works as expected | 
-| Name input | User inputs cahracters other letters | Error message appears | Works as expected | 
+| Name input | User inputs cahracters other than letters | Error message appears | Works as expected | 
 | Name input | User inputs first letter lower case | Error message appears | Works as expected | 
 | Selection | User selects questionnaire | User selects 1 or 2 | Works as expected | 
 | Selection | User selects invalid number | Error message appears | Works as expected | 
 | Description 2 | User is given description of questionnaire | Description presented | Works as expected |
 | Presentation | User is given questionnare questions | Questions appear | Works as expected | 
-| Presentation | User is given questionnare questions | Questions appear | Works as expected |
 | Description 3 | User is given description of results | Results presented | Works as expected |
 | Advice | User asked whether they want advice | Option appears | Works as expected | 
 | Advice | User inputs anything other than yes or no | Error message appears | Works as expected |
@@ -42,3 +41,4 @@ No problems or issues were encountered by using Google Sheets
 
 
 ### [BACK TO README](https://github.com/davidelan/psychology-test/blob/main/README.md)
+

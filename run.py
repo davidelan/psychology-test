@@ -343,7 +343,7 @@ def advise(selection, total_score):
     """
     print()
     while True:
-        print("Would you like to get a NON PROFESSIONAL advice ", end=' ')
+        print("Would you like to get a NON PROFESSIONAL advice ")
         print("according to your results? (yes/no): ", end=' ')
         answer = input().lower()
         if answer == "yes":
@@ -420,7 +420,7 @@ def re_run_main():
     run = True
 
     while run:
-        print("Would you like to re-take one of the ", end=' ')
+        print("Would you like to re-take one of the ")
         print("psychological tests? (yes/no): ", end=' ')
         answer = input().lower()
         if answer == "yes":

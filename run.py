@@ -434,9 +434,8 @@ def re_run_main():
             type_print(Fore.YELLOW + " for taking part ")
             type_print("in our psychological test. Goodbye")
             type_print(Fore.RESET)
-
             print("\n")
-            break
+            exit()
         else:
             print("Invalid input. Please enter 'yes' or 'no'.")
 

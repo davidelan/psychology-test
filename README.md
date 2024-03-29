@@ -163,9 +163,11 @@ If I had more time, I could have also optimized the program by removing recursiv
 
 ## Validation
 
-PEP8 validation was done using the Code Insitute validator - [CI PEP8 Validator](https://pep8ci.herokuapp.com/)
+PEP8 validation was done using the Code Insitute validator - [here - CI PEP8 Validator](https://pep8ci.herokuapp.com/)
 
-All code was validated, and where lines were showing as too long they were adjusted. Some line adjustments caused bugs in the code and it stopped working so they were left as longer lines to avoid this issue. pycodestyle . - was used in Codeanywhere terminal to list any issues.
+Initial validation failed mainly due to lines showing as too long. After segmentin the affected lines, the validation results showed no errors or warnings.
+
+![pep8 validation](/assets/images/pep8ci-validation.jpg)
 
 
 ## Deployment

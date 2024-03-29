@@ -8,7 +8,7 @@ In order to make sure that all functionalities and sections of the program work 
 | Description 1 | User is given a description of program | Description presented | Works as expected |
 | Name input | User is asked to enter their name | Name input| Works as expected | 
 | Name input | User inputs cahracters other than letters | Error message appears | Works as expected | 
-| Name input | User inputs first letter lower case | Error message appears | Works as expected | 
+| Name input | User inputs name longer than 20 characters | Error message appears | Works as expected | 
 | Selection | User selects questionnaire | User selects 1 or 2 | Works as expected | 
 | Selection | User selects invalid number | Error message appears | Works as expected | 
 | Description 2 | User is given description of questionnaire | Description presented | Works as expected |

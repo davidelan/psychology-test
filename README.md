@@ -1,8 +1,7 @@
-
 # Psychology Test for fun!
-![header](/assets/images/run-program-screenshot.jpg)
+![header](/assets/images/run_program_screenshot.jpg)
 
-This project utilizes well known psychological questionnaires to assess the level of Generalized Anxiety Disorder (GAD) of the user. It can be used for self assessment and includes two questionnaires with 7 and 20 questions. It is intended for educational purpose only. This program must NOT be used as a real, medical or psycholgical assessment. 
+This project utilizes well known psychological questionnaires to assess the level of Generalized Anxiety Disorder (GAD) of the user. It can be used for self assessment and includes two questionnaires with 7 and 20 questions. It is intended for educational purposes only. This program must NOT be used as a real, medical or psychological assessment. 
 
 The deployed project live link is [HERE](https://psychology-test-17ac581f1251.herokuapp.com/) - ***Use Ctrl (Cmd) and click to open in a new window.*** 
 
@@ -11,9 +10,12 @@ The deployed project live link is [HERE](https://psychology-test-17ac581f1251.he
 
 - [Introduction](#introduction)
 - [Project](#project)
+- [Pre development](#pre-development)
+- [Development](#development)
 - [Features](#features)
-- [Use of Google Sheets](#use-of-google-sheets)
+- [Google Sheets](#google-sheets)
 - [Technologies Used](#technologies-used)
+- [Resources](#resources)
 - [Testing](#testing)
 - [Future Updates](#future-updates)  
 - [Validation](#validation)
@@ -24,7 +26,7 @@ The deployed project live link is [HERE](https://psychology-test-17ac581f1251.he
 
 ## Introduction
 
-In this project, the user is asked to enter their name and then after a short greeting, they are asked to choose between a short (GAD-7, 7 questions) and a longer (SAS-20, 20 questions). Both questionnaires are meant to be a self assesment about the individual level of anxiety. After answering all questions the score and a its brief description is presented. At this poin the user can choose to get an advice according to their score. Wheher the user decides to get the advice or not, the program asks if they would like to redo one of the questionnaires. When the teh answer to this question is "no" the progream is exited. 
+In this project, the user is asked to enter their name and then after a short greeting, they are asked to choose between a short (GAD-7, 7 questions) and a longer (SAS-20, 20 questions). Both questionnaires are meant to be a self assessment about the individual level of anxiety. After answering all questions the score and a its brief description is presented. At this point the user can choose to get an advice according to their score. Whether the user decides to get the advice or not, the program asks if they would like to redo one of the questionnaires. When the the answer to this question is "no" the program is exited. 
 
 ## Project 
 
@@ -41,26 +43,26 @@ Have a chance to assess the user's level of anxiety and understand what a certai
 ### Site owner goals
 
 Present a program that gives clear instructions and information each time a user visits.
-Present a program that gives clear feedbaks when inputting wrong data/choice
+Present a program that gives clear feedbacks when inputting wrong data/choice
 Read and write information from/to Google Sheets containing the questionnaires and various descriptions.
-Give the user an idea of how anxiety assessment looks like
+Give the user an idea of what an anxiety assessment looks like
 
 ### Pre development
 
-In order to see the general flow of the program I created a flow chart with all the main steps. 
+In order to see the general flow of the program, I created a flow chart with all the main steps. 
 
 ![flow chart](/assets/images/flowchart.jpg)
 
 ### Development
 
 The code was written based on the idea depicted in the flow chart above. Each section of the program was written sequentially, meaning that all necessary coding was written for the first functionality and every else was written according to the needs of the development. 
-The first part of the program is dedicated to the imports and the declaration of variables. Particularly important was the idea to crate variables that contain the link to the GoogleSheet cells, in which the information for the questionnaires and the descriptions is stored. 
+The first part of the program is dedicated to the imports and the declaration of variables. Particularly important was the idea to create variables that contain the link to the GoogleSheet cells, in which the information for the questionnaires and the descriptions is stored. 
 
 ## Features
 
 ### Slow Typing Instructions
 
-In order to display the information in a more readable way and more user friendly, I used a typing effect that prints the letters of each word in a slower motion. This is used througout the program. I actually created two functions for this purpose, one that prints the information a bit slower that the other. The slower function was used to display the information obtained from the GoogleSheet. For every other printing the other (a bit faster) function was used. 
+In order to display the information in a more readable way and more user friendly, I used a typing effect that prints the letters of each word in a slower motion. This is used throughout the program. I actually created two functions for this purpose, one that prints the information a bit slower than the other. The slower function was used to display the information obtained from the GoogleSheet. For every other printing the other (a bit faster) function was used. 
 
 ### Colored Text Typing
 
@@ -71,26 +73,26 @@ In order to make the text and the providing of information more interesting and 
 
 ### Saved name
 
-The name entered by the user is saved in the GoogleSheet so that can be retrieved later in the program if the user decides to re-run the program. At that poin the program greets the user with his name retrieved from the sheet.
+The name entered by the user is saved in the GoogleSheet so that can be retrieved later in the program if the user decides to re-run the program. At that point the program greets the user with his name retrieved from the sheet.
 
 ![saved name](/assets/images/saved-name.jpg)
 
 
-### Description of scope of program
+### Description of the scope of program
 
-The program starts by a brief description of the purpose of the project and a disclaimer (also visible in the screenshot above) to make sure this tool is only used for fun and not for medical purposes. 
+The program starts with a brief description of the purpose of the project and a disclaimer (also visible in the screenshot above) to make sure this tool is only used for fun and not for medical purposes. 
 
 
 ### Selection of Questionnaire
 
-The user has the chance to choose between two questionnaires which have a different length. One is composed of 7 and the other of 20 questions. 
+The user has the chance to choose between two questionnaires that have different lengths. One is composed of 7 and the other of 20 questions. 
 
 ![questionnaire choice](/assets/images/choice.jpg)
 
 
 ### Description of questionnaires and results
 
-At all stages of the program a description of the the information is displayed. 
+At all stages of the program a description of the information is displayed. 
 The questionnaires and the achieved score are briefly described.
 
 ![description questionnaire](/assets/images/q-description.jpg)
@@ -98,7 +100,7 @@ The questionnaires and the achieved score are briefly described.
 
 ### Chance to get an advice
 
-After the user has completed the chosen questionnaire and found out thier score, the program asks them if they wan to get an advise based on their score. If the participant chooses "yes" the program retrieves a piece of text from the GoogleSheet directly related to the score.
+After the user has completed the chosen questionnaire and found out their score, the program asks them if they want to get an advice based on their score. If the participant chooses "yes" the program retrieves a piece of text from the GoogleSheet directly related to the score.
 The advice is absolutely given for fun and has no medical or psychological value.
 
 ![advice option](/assets/images/advice.jpg)
@@ -106,19 +108,19 @@ The advice is absolutely given for fun and has no medical or psychological value
 
 ### Chance to re-take the questionnaires
 
-At the end of the program, regardless of whether the user decided to get the advice, they get the option to re-take the test, including the questionnaire choice.
+At the end of the program, regardless of whether the user decided to get the advice, they get the option to retake the test, including the questionnaire choice.
 
 
 ### Error Handling
 
-The error handling and data validation when the name of the user is entered and when choosing the questionnaire is dealt with the Python Try Except Exception Handling.
+The error handling and data validation when the name of the user is entered and when choosing the questionnaire are dealt with the Python Try Except Exception Handling.
 
 ![error handling](/assets/images/error-handling.jpg)
 
 
 ## Use of Google Sheets
 
-As already mentioned before, GoogleSheets were used in this project. The purpose was to store the various information such as questionnaires' questions and possible answers and all descriptions and to save the name of the user. In fact, there are two sheets called "questionnaires" and "descriptions".
+As already mentioned before, GoogleSheets were used in this project. The purpose was to store the various information such as questionnaires' questions, possible answers and all descriptions and to save the name of the user. In fact, there are two sheets called "questionnaires" and "descriptions".
 
 ![google sheets](/assets/images/google-sheet.jpg)
 
@@ -128,6 +130,7 @@ As already mentioned before, GoogleSheets were used in this project. The purpose
 - The language used to code this program is Python
 - Google API
 - Google Sheets
+
 
 ### Resources
 
@@ -141,7 +144,7 @@ As already mentioned before, GoogleSheets were used in this project. The purpose
 
 [colorama Fore](https://pypi.org/project/colorama/) - for colored text
 
-[typing effect](https://www.101computing.net/python-typing-text-effect/) - for slow motion typing
+[typing effect](https://www.101computing.net/python-typing-text-effect/)) - for slow motion typing
 
 [datetime](https://docs.python.org/3/library/time.html) - for time functions 
 
@@ -150,7 +153,7 @@ As already mentioned before, GoogleSheets were used in this project. The purpose
 
 ## Testing
 
-The code has been tested and the results can be found [here - TESTING](https://github.com/todiane/corri-construction-p3/blob/main/TESTING.md)
+The code has been tested, and the results can be found [here - TESTING](https://github.com/davidelan/psychology-test/blob/main/TESTING.md)
 
 
 ## Future Updates
@@ -158,7 +161,7 @@ The code has been tested and the results can be found [here - TESTING](https://g
 The project could be updated by including more questionnaires, for example or by having different "themes" that could be assessed. 
 Another improvement could be to have a login system, which could involve the creation of a username and password. 
 
-If I had more time, I could have also optimized the program by removing recursive code.
+If I had more time, I could have also optimized the program by removing recursive code. 
 
 
 ## Validation
@@ -195,10 +198,11 @@ The Application has been deployed from GitHub to Heroku by following the steps:
 4. Go to the CODE area on the right and select "Open with GitHub Desktop".
 5. You will be asked if you want to clone the repository - say yes.
 6. GitHub desktop will suggest what to do next - select Open code using Visual Studio Code.
-
+   
 ## Bugs
 
 I am not aware of any bugs in the code
+
 
 
 ## Credits
@@ -217,4 +221,4 @@ I would like to thank Kay Welfare and my fellow students for the inspiration and
 
 A big thank you to my mentor Jubril Akolade for his support and valuable advices.
 
-I am very grateful to my girlfriend who puts up with me when I am under stress becuase of a coding project :-D
+I am very grateful to my girlfriend who puts up with me when I am under stress becuase of a coding project :-)

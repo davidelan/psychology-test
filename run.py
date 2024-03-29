@@ -109,7 +109,7 @@ def get_name():
                 raise ValueError("Name must be 20 characters or less")
 
             else:
-                os.system('cls')  # Clear Screen
+                os.system('clear')  # Clear Screen Command for Linux/OS X
                 print("\n")
                 titled_name = name.title()
                 type_print("Hello " + Fore.GREEN + titled_name + Fore.RESET)

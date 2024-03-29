@@ -108,13 +108,11 @@ def get_name():
             if len(name) > 20:  # name is longer than 20 characters
                 raise ValueError("Name must be 20 characters or less")
 
-            if not name[0].isupper():  # name must start with a capital letter
-                raise ValueError("Name must start with a capital letter")
-
             else:
-                os.system('clear')  # Clear Screen Command for Linux/OS X
+                os.system('cls')  # Clear Screen
                 print("\n")
-                type_print("Hello " + Fore.GREEN + name + Fore.RESET)
+                titled_name = name.title()
+                type_print("Hello " + Fore.GREEN + titled_name + Fore.RESET)
                 type_print(", Welcome to our psychology-test for fun :-)")
                 descriptions.update_acell(user_name, name)  # Update the cell
                 break  # if name follows all rules, exit the while loop

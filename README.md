@@ -3,7 +3,7 @@
 
 This project utilizes well known psychological questionnaires to assess the level of Generalized Anxiety Disorder (GAD) of the user. It can be used for self assessment and includes two questionnaires with 7 and 20 questions. It is intended for educational purposes only. This program must NOT be used as a real, medical or psychological assessment. 
 
-The deployed project live link is [HERE](https://psychology-test-17ac581f1251.herokuapp.com/) - ***Use Ctrl (Cmd) and click to open in a new window.*** 
+The deployed project live link is [HERE](https://psychology-test-17ac581f1251.herokuapp.com/)
 
 
 ## Contents
@@ -26,7 +26,7 @@ The deployed project live link is [HERE](https://psychology-test-17ac581f1251.he
 
 ## Introduction
 
-In this project, the user is asked to enter their name and then after a short greeting, they are asked to choose between a short (GAD-7, 7 questions) and a longer (SAS-20, 20 questions). Both questionnaires are meant to be a self assessment about the individual level of anxiety. After answering all questions the score and a its brief description is presented. At this point the user can choose to get an advice according to their score. Whether the user decides to get the advice or not, the program asks if they would like to redo one of the questionnaires. When the the answer to this question is "no" the program is exited. 
+In this project, the user is asked to enter their name and then after a short greeting, they are asked to choose between a short (GAD-7, 7 questions) and a longer (SAS-20, 20 questions) questionnaire. Both questionnaires are meant to be a self assessment about the individual level of anxiety. After answering all questions the score and a its brief description is presented. At this point the user can choose to get an advice according to their score. Whether the user decides to get the advice or not, the program asks if they would like to redo one of the questionnaires. When the answer to this question is "no" the program is exited. 
 
 ## Project 
 
@@ -55,7 +55,7 @@ In order to see the general flow of the program, I created a flow chart with all
 
 ### Development
 
-The code was written based on the idea depicted in the flow chart above. Each section of the program was written sequentially, meaning that all necessary coding was written for the first functionality and every else was written according to the needs of the development. 
+The code was written based on the idea depicted in the flow chart above. Each section of the program was written sequentially, meaning that all necessary coding was written for the first functionality and everything else was written according to the needs of the development. 
 The first part of the program is dedicated to the imports and the declaration of variables. Particularly important was the idea to create variables that contain the link to the GoogleSheet cells, in which the information for the questionnaires and the descriptions is stored. 
 
 ## Features
@@ -121,6 +121,9 @@ The error handling and data validation when the name of the user is entered and 
 ## Use of Google Sheets
 
 As already mentioned before, GoogleSheets were used in this project. The purpose was to store the various information such as questionnaires' questions, possible answers and all descriptions and to save the name of the user. In fact, there are two sheets called "questionnaires" and "descriptions".
+
+The link to the Google Sheet can be found [HERE](https://docs.google.com/spreadsheets/d/1L7sFbbvWCobS1wFuyns7hN-AMi6cf0RM9CJFNRVymcc/edit#gid=1680754323)
+
 
 ![google sheets](/assets/images/google-sheet.jpg)
 
